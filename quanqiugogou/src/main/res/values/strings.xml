@@ -2,7 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
 
     <!-- <string name="app_name">分销主站V3.3</string> -->
-    <string name="app_name">分销门户</string>
+    <string name="app_name">飞鹏聚惠</string>
     <string name="title">分销门户V3.3</string>
     <string name="yijijifen">一级分销</string>
     <string name="erjijifen">二级分销</string>

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.shopnum1.distributionportal"
     android:versionCode="8"
-    android:versionName="3.1.4(150911001)" >
+    android:versionName="3.1.4(150911001)">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.GET_TASKS" />
@@ -27,8 +27,9 @@
     <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
-	<!-- 微信支付 -->
-	<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <!-- 微信支付 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
@@ -41,14 +42,14 @@
         android:allowBackup="true"
         android:icon="@drawable/app_logo"
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        android:theme="@android:style/Theme.Light.NoTitleBar">
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="AkVmsOLTrP4NOcNnb4DKa4h0" />
 
         <activity
             android:name=".InitActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -67,25 +68,25 @@
         </activity>
         <activity
             android:name="com.shopnum1.distributionportal.AssessShowActivity"
-             android:windowSoftInputMode="adjustPan" 
-            android:screenOrientation="portrait" />
-        
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
         <activity
             android:name="com.shopnum1.distributionportal.SelectAgentActivity"
-             android:windowSoftInputMode="adjustPan" 
-             android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
-        
-        
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+
         <activity
             android:name="com.shopnum1.distributionportal.RechargeActivity2"
             android:screenOrientation="portrait" />
-         <activity
+        <activity
             android:name="com.shopnum1.distributionportal.EntityshopActivity"
-                android:windowSoftInputMode="stateHidden|stateUnchanged"  
-            android:screenOrientation="portrait" />
-        
-        
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+
+
         <activity
             android:name="com.shopnum1.distributionportal.PhotoshowActivity"
             android:screenOrientation="portrait" />
@@ -130,15 +131,15 @@
         <activity
             android:name=".MainActivity2"
             android:launchMode="singleTask"
-            
+
             android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
-                android:windowSoftInputMode="stateHidden|stateUnchanged"  
-            android:theme="@style/Theme.TranslucentActionBar.ActionBar.Overlay"
-             
             android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+
+            android:theme="@style/Theme.TranslucentActionBar.ActionBar.Overlay"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
         <activity
             android:name="com.shopnum1.distributionportal.LimitProductActivity"
             android:screenOrientation="portrait"
@@ -201,8 +202,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".SearchResult"
-            android:windowSoftInputMode="adjustPan"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ProductDetails"
             android:screenOrientation="portrait" />
@@ -239,8 +240,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".BrandDetail"
-            android:screenOrientation="portrait" 
-            android:launchMode="singleTask"/>
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".FootPrint"
             android:screenOrientation="portrait" />
@@ -294,7 +295,7 @@
             android:name=".RegistActivity2"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
-         <activity
+        <activity
             android:name=".AnnouncementActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
@@ -313,7 +314,7 @@
             android:name="com.baidu.frontia.activity.share.FrontiaLocalShareActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
-        <activity android:name="com.alipay.sdk.pay.demo.PayDemoActivity" >
+        <activity android:name="com.alipay.sdk.pay.demo.PayDemoActivity">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -325,8 +326,7 @@
             android:configChanges="orientation|keyboardHidden|navigation"
             android:exported="false"
             android:screenOrientation="behind"
-            android:windowSoftInputMode="adjustResize|stateHidden" >
-        </activity>
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
 
         <!-- alipay sdk end -->
         <activity
@@ -334,8 +334,7 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:windowSoftInputMode="stateHidden|adjustResize" >
-        </activity>
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
 
         <!-- 微信分享回调 -->
         <activity
@@ -357,9 +356,9 @@
         <activity
             android:name="cn.sharesdk.tencent.qq.ResultReceiver"
             android:launchMode="singleTask"
-            android:noHistory="true" >
+            android:noHistory="true">
 
-            <intent-filter android:priority="1000" >
+            <intent-filter android:priority="1000">
                 <data android:scheme="tencent100371282" />
 
                 <action android:name="android.intent.action.VIEW" />
@@ -375,36 +374,35 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-		
-		<!--微信支付  -->
-		<activity
+
+        <!--微信支付  -->
+        <activity
             android:name=".PayActivity"
-            android:label="@string/app_name"
             android:exported="true"
+            android:label="@string/app_name"
             android:launchMode="singleTop">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            
+
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="wxf2f565574a968187"/>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="wxf2f565574a968187" />
             </intent-filter>
         </activity>
-        
+
         <activity
             android:name="com.weixin.paydemo.wxapi.WXPayEntryActivity"
             android:exported="true"
-            android:launchMode="singleTop"/>
+            android:launchMode="singleTop" />
         <activity
             android:name="com.shopnum1.distributionportal.wxapi.WXPayEntryActivity"
             android:exported="true"
-            android:launchMode="singleTop"/>
-        
+            android:launchMode="singleTop" />
 
-        <receiver
-            android:name="net.sourceforge.simcpux.AppRegister">
+
+        <receiver android:name="net.sourceforge.simcpux.AppRegister">
             <intent-filter>
                 <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
             </intent-filter>
@@ -419,7 +417,7 @@
         <!-- 用于接收系统消息以保证PushService正常运行 -->
         <receiver
             android:name="com.baidu.android.pushservice.PushServiceReceiver"
-            android:process=":bdservice_v1" >
+            android:process=":bdservice_v1">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
@@ -435,7 +433,7 @@
         <!-- Push服务接收客户端发送的各种请求 -->
         <receiver
             android:name="com.baidu.android.pushservice.RegistrationReceiver"
-            android:process=":bdservice_v1" >
+            android:process=":bdservice_v1">
             <intent-filter>
                 <action android:name="com.baidu.android.pushservice.action.METHOD" />
                 <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
@@ -450,7 +448,7 @@
         <service
             android:name="com.baidu.android.pushservice.PushService"
             android:exported="true"
-            android:process=":bdservice_v1" >
+            android:process=":bdservice_v1">
             <intent-filter>
                 <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
             </intent-filter>
@@ -463,7 +461,7 @@
 
 
         <!-- 此处Receiver名字修改为当前包名路径 -->
-        <receiver android:name="com.shopnum1.distributionportal.PushTestReceiver" >
+        <receiver android:name="com.shopnum1.distributionportal.PushTestReceiver">
             <intent-filter>
                 <!-- 接收push消息 -->
                 <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
