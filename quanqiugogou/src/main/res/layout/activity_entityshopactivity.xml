@@ -9,14 +9,11 @@
         android:layout_width="match_parent"
         android:layout_height="44dp"
         android:background="@color/head_bg"  >
-
             <TextView
-           
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
              android:text="类目"
-          
          android:layout_centerVertical="true"
            android:gravity="center"
             android:textColor="#ffffff"
@@ -27,10 +24,10 @@
         android:layout_below="@+id/relativeLayout1"
         android:layout_width="match_parent"
         android:layout_height="44dp"
+        android:visibility="gone"
         android:background="#cac9d1"  >
 
         <RelativeLayout
-           
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
@@ -41,7 +38,6 @@
             android:layout_alignParentTop="true"
             android:layout_toLeftOf="@+id/tv_xiaoxi"
            >
-
             <EditText
                 android:id="@+id/rl_search"
                android:layout_width="match_parent"
@@ -76,10 +72,6 @@
         android:layout_below="@+id/relativeLayout"
         android:orientation="horizontal"
         android:scrollbars="none" >
-
-        
-
-
                  <ListView
                       android:id="@+id/adresslistView"
                     android:layout_width="match_parent"
@@ -91,9 +83,6 @@
                     android:dividerHeight="1px"
                     android:layout_weight="6" >
                 </ListView>
-
-                 
-
                 <ListView
                     android:id="@+id/storelistView"
                     android:layout_width="match_parent"

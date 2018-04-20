@@ -42,20 +42,18 @@ public class SelectAgentActivity extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_select_agent_id);
-		
 		initView();
 		initData();
 		Log.i("SelectAgentActivity" , "onCreate");
 	}
-
 	private void initView() {
 		backIv = (ImageView) findViewById(R.id.back);
 		listView = (ListView) findViewById(R.id.list_view);
 		
 	}
+
 	private void initData() {
 		getAgentList();
-		
 		backIv.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -79,8 +77,6 @@ public class SelectAgentActivity extends Activity {
 				break;
 
 			case 2:
-				//返回注册
-//				
 				//判断分销商
 				final String agent = msg.obj.toString();
 				HttpUtils httpUtils = new HttpUtils();
@@ -100,7 +96,6 @@ public class SelectAgentActivity extends Activity {
 							JSONObject object=new JSONObject(data.result);
 							if(object.optString("Data").equals("true")){
 								//保存 agentId
-								
 								 ShareUtils.putString(getApplicationContext(),  MyApplication.AGENT_ID_KEY, agent);
 								 MyApplication.agentId = agent;  //放入全局内存
 								// 进入主页
@@ -119,9 +114,6 @@ public class SelectAgentActivity extends Activity {
 					}
 					
 				});
-				
-				
-				
 //				//保存 agentId
 //				String agent = msg.obj.toString();
 //				 ShareUtils.putString(getApplicationContext(),  MyApplication.AGENT_ID_KEY, agent);
@@ -171,8 +163,6 @@ public class SelectAgentActivity extends Activity {
 						  agenLists.add(agent);
 						  agenLists2.add(memLoginID);
 					  }
-					 
-					  
 					  Message msg  = new Message();
 					  msg.obj  = agenLists2;
 					  msg.what = 1;

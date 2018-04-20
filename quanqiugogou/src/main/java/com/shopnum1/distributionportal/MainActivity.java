@@ -483,7 +483,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		DisplayMetrics dm = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(dm);
 		width = dm.widthPixels;// 宽度
-		
 		view_banner = (ViewPager) this.findViewById(R.id.view_banner);
 		tv_hot = (TextView) this.findViewById(R.id.tv_hot);
 		tv_big = (TextView) this.findViewById(R.id.tv_big);
@@ -515,8 +514,6 @@ public class MainActivity extends Activity implements OnClickListener {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				try {
-					
-					
 //					Intent intent = new Intent(getBaseContext(), BrandDetail.class);
 //					JSONObject obj= (JSONObject) typeAdapter.getItem(position);
 //					JSONArray descriptionArray = obj.getJSONArray("Description");

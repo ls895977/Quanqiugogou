@@ -91,11 +91,9 @@ public class EntityshopActivity extends Activity {
 
     //初始化
 	public void initLayout(){
-		
 		rl_search=(EditText) findViewById(R.id.rl_search);
 		rl_search.setImeOptions(EditorInfo.IME_ACTION_SEARCH);
 		rl_search.setOnEditorActionListener(new OnEditorActionListener() {
-			
 			@Override
 			public boolean onEditorAction(TextView arg0, int arg1, KeyEvent arg2) {
 				// TODO Auto-generated method stub
@@ -184,14 +182,11 @@ public class EntityshopActivity extends Activity {
 				});
 		getdata();
 		adresslistView=(ListView)findViewById(R.id.adresslistView);	
-	
 		group=(LinearLayout) findViewById(R.id.viewGroup);
 		adresslistView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);		
 		adressadapter=new MyCityadapter(leftdata); 
 		adresslistView.setAdapter(adressadapter);
 		adresslistView.setOnItemClickListener(new OnItemClickListener() {
-
-			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
 				// TODO Auto-generated method stub
@@ -199,9 +194,7 @@ public class EntityshopActivity extends Activity {
 				isfirst=false;
 					adresslistView.setBackgroundColor(Color.parseColor("#f6f6f6"));
 					StorelistView.setVisibility(View.VISIBLE);
-					
-				
-				getdata1(leftdata.get(arg2).get("ID"));	
+				getdata1(leftdata.get(arg2).get("ID"));
 			}
 		});
 		StorelistView=(ListView)findViewById(R.id.storelistView);

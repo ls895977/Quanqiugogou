@@ -16,6 +16,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -70,7 +71,6 @@ public class SearchResult extends Activity {
 	private TextView tv_confirm;
 	private TextView tv_cancel;
 	private TextView tv_filter;
-	
 	private DrawerLayout drawer_layout;
 	private int width;
 	long minNum = 0;// 最小值
@@ -89,6 +89,7 @@ public class SearchResult extends Activity {
 		productCategoryID = getIntent().getStringExtra("ProductCategoryID");
 		select[0] = typeid + "";// 获取传过来的TypeId
 		searchstr = getIntent().getStringExtra("searchstr");// 获取得到的搜索字符串
+		Log.e("aa","--searchstr---SearchResult页是搜索---"+searchstr);
 		// 返回
 		((ImageView) findViewById(R.id.back))
 				.setOnClickListener(new OnClickListener() {
@@ -147,8 +148,10 @@ public class SearchResult extends Activity {
 		String productCatagoryUrl =  HttpConn.hostName + "/api/productcatagory/?id="
 				+ 0 + "&AppSign=" + HttpConn.AppSign
     			+"&AgentID="+MyApplication.agentId +"&sbool=true";
+		Log.e("aa","--"+productCatagoryUrl);
 		hu.send(HttpMethod.GET, productCatagoryUrl,
 				new RequestCallBack<String>() {
+					@SuppressLint("WrongConstant")
 					@Override
 					public void onFailure(HttpException arg0, String arg1) {
 						Toast.makeText(getApplicationContext(), "连接网络失败", 1000)
