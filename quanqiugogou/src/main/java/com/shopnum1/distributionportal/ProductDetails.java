@@ -114,7 +114,6 @@ public class ProductDetails extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.product_details);
-	
 		options = new DisplayImageOptions.Builder()
 				.showImageOnLoading(R.drawable.banner) // 设置图片下载期间显示的图片
 				.showImageForEmptyUri(R.drawable.banner) // 设置图片Uri为空或是错误的时候显示的图片
@@ -133,7 +132,6 @@ public class ProductDetails extends Activity implements OnClickListener {
 		initLayout();
 		PanDaniscollect();
 		getProduct();
-	
 	}
 	void PanDaniscollect(){
 		HttpUtils hu = new HttpUtils();
